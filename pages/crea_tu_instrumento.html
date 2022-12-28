@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creá tu instrumento</title>
+        <link rel="shortcut icon" href="../assets/img/favicon_blanco.png" type="image/x-icon" class="favicon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body class="body">
+        <nav> 
+            <a href="../index.html"><img class=nav__favicon src="../assets/img/favicon_negro_sin_fondo.png"></a>   
+            <ul>       
+                <li><a href="">Instrumentos</a>
+                    <ul>
+                        <li><a href="./guitarras.html">Guitarras</a></li>
+                        <li><a href="./bajos.html">Bajos</a></li>
+                    </ul>
+                </li>
+                <li><a href="./crea_tu_instrumento.html">Creá tu instrumento</a></li>
+                <li><a href="./conoce_el_taller.html">Conocé el taller</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul> 
+            <div class="redes">
+                <a href="https://www.facebook.com/baminstruments" target="_blank"><img class="redes__fb_logo" src="../assets/img/facebook_logo.png"></a> 
+                <a href="https://www.instagram.com/bam_instruments" target="_blank"><img class="redes__insta_logo" src="../assets/img/instagram_logo.png"></a>
+                <a href=""><img class="redes__wapp_logo" src="../assets/img/wapp_logo.png"></a>
+            </div>    
+        </nav>
+        <header class="header_pages">
+            <h1 class="titulo3">CREÁ TU INSTRUMENTO</h1>
+        </header>    
+        <main>
+            <section>
+                <p class="crea_tu_instrumento">En esta sección podrás personalizar tu instrumento de acuerdo a tus gustos. Podrás elegir entre múltiples opciones tales como la madera, el color, herrajes, micrófonos, etc y lograr así un instrumento único.</p>
+            </section>
+            <section class="tu_bam">    
+                <form method="post" action="">    
+                    <fieldset class="fieldset_bam1">
+                        <label>Guitarra
+                            <input type="radio" name="instrumento" value="guitarra">
+                        </label>
+                        <label>Bajo
+                            <input type="radio" name="instrumento" value="bajo">
+                        </label>
+                    </fieldset>
+                    <fieldset class="fieldset_bam2">    
+                        <label>Cuerpo</label>
+                            <select name="cuerpo">
+                                <option value="guindo">Guindo</option>
+                                <option value="caoba">Caoba</option>
+                                <option value="okume">Okumé</option>
+                                <option value="fresno">Fresno</option>
+                            </select>
+                        <label>Mango</label>
+                            <select name="Mango">
+                                <option value="arce">Arce</option>
+                                <option value="caoba">Caoba</option>
+                                <option value="guatambu">Guatambú</option>
+                            </select>
+                        <label>Diapasón</label> 
+                            <select name="diapason">
+                                <option value="arce">Arce</option>
+                                <option value="palorosa">Palo rosa</option>
+                                <option value="palisandro">Palisandro</option>
+                                <option value="ebano">Ébano</option>
+                            </select>
+                        <label for="color">Color</label>
+                            <input type="color" value="#ff0000">    
+                    </fieldset>
+                    <fieldset class="fieldset_bam3">Anotaciones finales
+                        <br>
+                        <textarea name="anotaciones" cols="100" rows="10"></textarea>
+                    </fieldset>
+                    <fieldset class="fieldset_bam4">
+                        <label>Nombre
+                            <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                        </label>
+                        <label>Apellido
+                            <input type="text" name="apellido" placeholder="Ingrese su apellido">
+                        </label>
+                        <label>Email
+                            <input type="email" name="email" placeholder="Ingrese su email">
+                        </label>
+                        <input type="submit" value="Enviar" class="enviar">
+                    </fieldset>
+                </form>  
+            </section>      
+        </main>
+        <footer class="footer">
+            <p>Bam! Instruments. Todos los derechos reservados. 2022 Bam! Web Design</p>
+        </footer>    
+    </body>
+</html>
