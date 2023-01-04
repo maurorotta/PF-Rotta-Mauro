@@ -700,8 +700,6 @@ hr {
 
 /*conoce el taller*/
 
-/*calculo que con grids queda mejor*/
-
 .taller_intro {
     color: #ffffff;
     font-size: 30px;
@@ -730,12 +728,7 @@ hr {
     display: flex;
     justify-content: center;
 }
-
-/*tengo un problema con el video y es que los controles pasan por delante del nav fixed cuando no se reproduce y no se como solucionarlo*/
-
 .video2 {
     width: 800px;
     z-index: -1;
 }
-
-/*el sitio no es responsive, creo que debería hacer mobile first y despues desktop*/
