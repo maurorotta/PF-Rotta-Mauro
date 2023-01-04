@@ -65,10 +65,6 @@ nav
         height: 80px;
         align-content: center;
     }
-    nav > ul > li:hover + li{
-        transform: translateY(50px); 
-        transition: 0.7s;
-    }
 }
 nav > ul {
     list-style: none;
@@ -100,6 +96,14 @@ nav > ul > li:hover ul {
     gap: 10px;
     transition: 0.7s;
 }
+@media (max-width: 950px) {
+    nav > ul > li:hover ul {
+        position: relative;
+        height: 85px;
+        margin-bottom: 0;
+    }
+    
+}    
 
 nav > ul > li > ul {
     max-height: 0;
@@ -111,6 +115,12 @@ nav > ul > li > ul {
     position: absolute;
     background-color: #ffffff;
     border-radius: 10px;
+}
+@media (max-width: 950px) {
+    nav > ul > li > ul {
+        align-items: start;
+        gap: 10px;
+    }
 }
  
 nav > ul > li > ul > li > a {
