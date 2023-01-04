@@ -53,7 +53,7 @@ nav
     }
     nav > .fa-bars:hover + ul {
         left: 0;
-    }  
+    } 
     nav > ul:hover{
         left: 0;
     }
@@ -119,14 +119,18 @@ nav > ul > li > ul > li > a {
     font-weight: 400;
     color: #063358;
 }
-.nav-icon {
-    width: 160px;
-}
 .nav__favicon {
     width: 75px;
     height: 75px;
 }
-
+@media (max-width: 950px) {
+    .nav-img {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }   
+}
 .redes 
 {
     width: 160px;
@@ -164,12 +168,18 @@ nav > ul > li > ul > li > a {
     padding: 10px;  
     font-size: 20px;
 }
-.titulo1 {
+@media (max-width: 495px) {
+    .footer {
+        text-align: center;
+    }
+}
+.titulo1, .titulo3 {
     color: #ffffff;
     font-style: bold;
     font-size: 90px;
     font-weight: 700;
     background-color: #181818;
+    padding: 10px;
 }
 .titulo-potencia {
     grid-area: titulo1;
@@ -204,16 +214,21 @@ nav > ul > li > ul > li > a {
  }  
 @media (max-width:950px){
     .titulo1 
-    {font-size: 60px;
+    {font-size: 40px;
     }
 }
-@media (max-width: 785px) {
-    .titulo1{
-        font-size: 40px;
+@media (max-width:450px){
+    .titulo1 
+    {font-size: 30px;
     }
 }
-.titulo1_2
-{
+.titulo-pages {
+    background-color: #181818;
+    width: 100%;
+    height: 170px;
+    text-align: center;
+} 
+.titulo1_2 {
     grid-area: titulo1_2;
     color: #ffffff;
     display: flex;
@@ -235,7 +250,6 @@ nav > ul > li > ul > li > a {
         font-size: 40px;
     }
 }
-
 .titulo2 {
     color: #ffffff;
     text-align: left;
@@ -243,21 +257,19 @@ nav > ul > li > ul > li > a {
     font: 700;
     font-size: 60px;
     font-weight: 700;
-    margin: 30px;
+    margin: 20px;
+    padding: 10px;
 }  
-
-.titulo3, .titulo-bajos {
-    background-color: #181818;
-    color: #ffffff;
-    text-align: center;
-    font-style: bold;
-    font: 700;
-    font-size: 80px;
-    font-weight: 700;
+@media (max-width: 950px) {
+    .titulo2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+    }
+    
 }
-
 .header_pages {
-    margin-top: 120px;
+    margin-top: 95px;
 }
 
 /*index*/
@@ -266,7 +278,7 @@ nav > ul > li > ul > li > a {
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 600px 1fr 700px 40px;
+    grid-template-rows: 100px 600px auto auto auto;
     grid-template-areas: "nav    nav    nav"
                          "header header header"
                          "main   main   main"
@@ -277,7 +289,7 @@ nav > ul > li > ul > li > a {
     .body_index {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 300px 1fr 1fr 40px;
+        grid-template-rows: 80px auto auto auto auto;
         grid-template-areas: "nav"
                              "header"
                              "main"
@@ -353,7 +365,7 @@ aside
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 170px 1fr 170px 400px;
+    grid-template-rows: 170px 1fr 170px auto;
     grid-template-areas: "titulo1 titulo1 titulo1"
                          "tarjeta tarjeta tarjeta"
                          "titulo1_2 titulo1_2 titulo1_2"
@@ -362,25 +374,14 @@ aside
 @media (max-width: 950px) {
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 85px 1fr 85px 400px;
-        grid-template-areas: "titulo1 titulo1 titulo1"
-                             "tarjeta tarjeta tarjeta"
-                             "titulo1_2 titulo1_2 titulo1_2"
-                             "video   video   video";
+        grid-template-columns: 100%;
+        grid-template-rows: 85px 1fr 85px auto;
+        grid-template-areas: "titulo1"
+                             "tarjeta"
+                             "titulo1_2"
+                             "video";
 
 }
-}
-@media (max-width: 785px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 65px 1fr 65px 400px;
-        grid-template-areas: "titulo1 titulo1 titulo1"
-                             "tarjeta tarjeta tarjeta"
-                             "titulo1_2 titulo1_2 titulo1_2"
-                             "video   video   video";
-    } 
 }
 .tarjeta 
 {
@@ -390,7 +391,11 @@ aside
     flex-wrap: wrap;
     margin: 30px;
 }
-
+@media (max-width: 950px) {
+    .tarjeta {
+        margin: 10px;
+    }
+}
 .titulo__producto__tarjeta 
 {
     font-size: 30px;
@@ -411,7 +416,11 @@ aside
     margin: 30px;
     padding: 10px;
 }
-
+@media (max-width: 950px) {
+    .producto__tarjeta {
+        margin: 10px;
+    }
+}
 .table__producto__tarjeta {
     padding: 5px;
     width: 100%;
@@ -447,26 +456,37 @@ aside
    width: 100%;
 }
 
-.video 
+.video
 {
     grid-area: video;
     justify-self: center;
     align-self: center;
-    background-color: #ffffff; 
-    border-radius: 10px;
+    margin: 30px;
 }
-.video1
-{
+.video1{
+    background-color: #ffffff;
     width: 640px;
     height: 320px;
     border-radius: 10px;
+    
 }
 @media (max-width: 785px) {
-    .video1 {
-        width: 320px;
-        height: auto;
+    .video, .video1 {
+        width: 480px;
+        height: 240px;
+    }  
+}
+@media (max-width: 500px) {
+    .video, .video1 {
+        width: 400px;
+        height: 200px;
     }
-    
+}
+@media (max-width: 420px) {
+    .video, .video1 {
+        width: 280px;
+        height: 140px;
+    }
 }
 .opiniones__tarjeta {
     display: flex;
@@ -484,8 +504,24 @@ aside
     border-radius: 10px;
     font-size: 25px;
 }
+@media (min-width: 495px) {
+    .div-review {
+        display: flex;
+    }
+}
 .fa-star {
     color: rgb(250, 246, 21);
+}
+@media (max-width: 950px) {
+    .fa-star {
+        font-size: 15px;
+    }
+    
+}
+@media (max-width: 950px) {
+    .titulo-opiniones {
+        font-size: 20px;
+    }  
 }
 @media (max-width: 785px) {
     .opinion {
@@ -497,25 +533,7 @@ span {
 }
 
 /*guitarras y bajos*/
-
-.body-bajos {
-    overflow-x: hidden;
-}
-.navbar {
-    background-color: #ffffff;
-    font-size: 27px;
-    color: #063358;
-    display: flex;
    
-}
-.carousel {
-    max-width: 400px;
-    padding: 10px;
-}
-.carousel-inner {
-    border-radius: 5px;
-    border: #063358 solid 2px;   
-}
 .titulo-especificaciones {
     color: #ffffff;
     text-align: left;
