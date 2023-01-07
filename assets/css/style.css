@@ -28,6 +28,7 @@ nav
     position: fixed;
     z-index: 1;
     top: 0;
+    box-shadow: 10px 10px 20px -3px rgba(0,0,0,0.42);
 }   
 .fa-bars {
     display: none;
@@ -89,22 +90,20 @@ nav > ul > li {
 }
 
 nav > ul > li:hover ul {
-    max-height: 100px;
+    max-height: 120px;
     width: 160px;
     padding-top: 10px;
     padding-bottom: 10px;
-    gap: 10px;
+    gap: 25px;
     transition: 0.7s;
 }
 @media (max-width: 950px) {
     nav > ul > li:hover ul {
         position: relative;
-        height: 85px;
-        margin-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: 0px;
     }
-    
-}    
-
+}   
 nav > ul > li > ul {
     max-height: 0;
     overflow: hidden;
@@ -119,7 +118,6 @@ nav > ul > li > ul {
 @media (max-width: 950px) {
     nav > ul > li > ul {
         align-items: start;
-        gap: 10px;
     }
 }
  
@@ -132,14 +130,6 @@ nav > ul > li > ul > li > a {
 .nav__favicon {
     width: 75px;
     height: 75px;
-}
-@media (max-width: 950px) {
-    .nav-img {
-        width: 100%;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-    }   
 }
 .redes 
 {
@@ -197,6 +187,8 @@ nav > ul > li > ul > li > a {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 10px 10px 20px -3px rgba(0,0,0,0.42);
+
 }
 .vibrate-1 {
 	animation: vibrate-1 0.3s linear infinite both;
@@ -425,6 +417,7 @@ aside
     background-color: #ffffff;
     margin: 30px;
     padding: 10px;
+    box-shadow: 10px 10px 20px -3px rgba(0,0,0,0.42);
 }
 @media (max-width: 950px) {
     .producto__tarjeta {
