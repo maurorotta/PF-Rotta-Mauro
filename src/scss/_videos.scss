@@ -1,0 +1,30 @@
+.video
+{
+    grid-area: video;
+    justify-self: center;
+    align-self: center;
+    margin: 30px;
+}
+.video1{
+    background-color: #ffffff;
+    width: 640px;
+    height: 320px;
+}
+@media (max-width: 785px) {
+    .video, .video1 {
+        width: 480px;
+        height: 240px;
+    }  
+}
+@media (max-width: 500px) {
+    .video, .video1 {
+        width: 400px;
+        height: 200px;
+    }
+}
+@media (max-width: 420px) {
+    .video, .video1 {
+        width: 280px;
+        height: 140px;
+    }
+}

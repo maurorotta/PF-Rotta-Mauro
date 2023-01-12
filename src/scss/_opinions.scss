@@ -1,0 +1,52 @@
+.opiniones__tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.opinion {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+}
+.opinion2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+    align-self: end;
+}
+@media (min-width: 495px) {
+    .div-review {
+        display: flex;
+    }
+}
+.fa-star {
+    color: rgb(250, 246, 21);
+}
+@media (max-width: 950px) {
+    .fa-star {
+        font-size: 15px;
+    }
+    
+}
+@media (max-width: 950px) {
+    .titulo-opiniones {
+        font-size: 20px;
+    }  
+}
+@media (max-width: 785px) {
+    .opinion, .opinion2 {
+        width: 100%;
+        font-size: 20px;
+    }
+}

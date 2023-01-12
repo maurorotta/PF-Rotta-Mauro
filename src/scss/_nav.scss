@@ -1,0 +1,134 @@
+nav {
+    grid-area: nav;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;    
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
+    > ul {
+        list-style: none;
+        display: flex;
+        > li {
+            position: relative;
+            &:hover ul {
+                max-height: 120px;
+                width: 160px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                gap: 25px;
+                transition: 0.7s;
+            }    
+            a {
+                text-decoration: none;
+                font-size: 27px;
+                font-weight: 400;
+                color: #063358; 
+                padding: 10px;
+                list-style: none;
+                &:hover {
+                    color: #009FE3;        
+                }
+            }
+            > ul {
+                max-height: 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                list-style: none;
+                position: absolute;
+                background-color: #ffffff;
+                box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.42);
+                > li > a {
+                    text-decoration: none;
+                    font-size: 27px;
+                    font-weight: 400;
+                    color: #063358;
+                }
+            }
+        }
+    }
+    .fa-bars {
+        display: none;
+    }
+}   
+.nav__favicon {
+    width: 75px;
+    height: 75px;
+}
+.redes 
+{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 15px;
+    .redes__fb_logo {
+        width: 35px;
+        height: 35px; 
+    }
+    .redes__insta_logo {
+        width: 35px;
+        height: 35px;
+        background-color: #ffffff;
+        border-radius: 11px;
+    }
+    .redes__wapp_logo {
+        width: 35px;
+        height: 35px;
+        background-color: #ffffff;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 975px) {
+    nav {
+        flex-direction: row-reverse;
+        height: 80px;
+        align-content: center;
+        > ul {
+            position: absolute;
+            flex-direction: column;
+            background-color: #ffffff;
+            width: 250px;
+            height: 100vh;
+            top: 0;
+            left: -300px;
+            gap: 30px;
+            margin-top: 79px;
+            transition: 0.5s;
+            &:hover{
+                left: 0;
+            }
+            > li { 
+                &:hover ul {
+                    position: relative;
+                    padding-top: 25px;
+                    padding-bottom: 0px;
+                    display: flex;
+                    align-items: flex-start;  
+                }
+                ul {
+                    box-shadow: none;
+                }
+            } 
+        }    
+        .fa-bars {
+            display: block;
+            color: #063358;
+            font-size: 30px;
+            padding: 10px;
+            &:hover + ul {
+                left: 0;
+            }
+        }    
+        .redes {
+            display: none;
+        }
+    }  
+}    

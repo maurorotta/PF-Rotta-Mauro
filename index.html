@@ -11,10 +11,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
-    <body class="body_index">
+    <body class="body-index">
+        <div class="lds-circle">
+            <div></div>
+        </div>
         <nav>
             <a class="nav-icon" href="./index.html"><img class=nav__favicon src="./assets/img/favicon_negro_sin_fondo.png"></a>
             <i class="fa-solid fa-bars"></i>    
@@ -160,7 +163,7 @@
         <aside>
             <h2 class="titulo2">OPINIONES DE USUARIOS</h2>
             <div class="opiniones__tarjeta">
-                <div class="opinion">
+                <div class="opinion" data-aos="fade-right"data-aos-offset="900" data-aos-easing="ease-in-sine">
                     <div class="div-review">
                         <h3 class="titulo-opiniones">Nicolás Aflalo</h3> 
                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -173,7 +176,7 @@
                     Espectacular la disposición y la buena onda por ayudar, siempre te elijo y siempre te voy a elegir. Súper recomendadas las calibradas a instrumentos, 
                     con mucha idea y dedicación. ¡Gracias Bam!"</p>
                 </div>
-                <div class="opinion">
+                <div class="opinion2" data-aos="fade-left" data-aos-offset="900" data-aos-easing="ease-in-sine">
                     <div class="div-review">
                         <h3 class="titulo-opiniones">Alejandro Diaz, Bien al sur Rock</h3>
                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -184,7 +187,7 @@
                     </div>    
                     <p>"La guitarra quedó espectacular. La verdad, muy buen laburo. Hace rato no sentía tan bien la viola."- </p>
                 </div>
-                <div class="opinion">
+                <div class="opinion" data-aos="fade-right" data-aos-offset="800" data-aos-easing="ease-in-sine">
                     <div class="div-review">
                         <h3 class="titulo-opiniones">Jor Splendore Manchento</h3>
                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -200,6 +203,7 @@
         <footer class="footer">
             <p>Bam! Instruments. Todos los derechos reservados. 2022 Bam! Web Design</p>
         </footer>
-        $ npm install animate.css --save
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
     </body>
 </html>
