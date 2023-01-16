@@ -10,9 +10,29 @@ nav {
     z-index: 1;
     top: 0;
     box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
+    @media (max-width: 975px) {
+        flex-direction: row-reverse;
+        height: 80px;
+        align-content: center;
+    }    
     > ul {
         list-style: none;
         display: flex;
+        @media (max-width: 975px) {
+            position: absolute;
+            flex-direction: column;
+            background-color: #ffffff;
+            width: 250px;
+            height: 100vh;
+            top: 0;
+            left: -300px;
+            gap: 30px;
+            margin-top: 79px;
+            transition: 0.5s;
+            &:hover{
+                left: 0;
+            }
+        }
         > li {
             position: relative;
             &:hover ul {
@@ -31,7 +51,7 @@ nav {
                 padding: 10px;
                 list-style: none;
                 &:hover {
-                    color: #009FE3;        
+                    color: $first-color;        
                 }
             }
             > ul {
@@ -44,18 +64,33 @@ nav {
                 position: absolute;
                 background-color: #ffffff;
                 box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.42);
+                @media (max-width: 975px) {
+                    box-shadow: none;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                }
                 > li > a {
                     text-decoration: none;
                     font-size: 27px;
                     font-weight: 400;
-                    color: #063358;
+                    color: $second-color;
                 }
             }
         }
     }
     .fa-bars {
         display: none;
-    }
+        @media (max-width: 975px) {
+            display: block;
+            color: rgb(6, 51, 88);
+            font-size: 30px;
+            padding: 10px;
+            &:hover + ul {
+                left: 0;
+            }
+        }
+    }    
 }   
 .nav__favicon {
     width: 75px;
@@ -68,6 +103,9 @@ nav {
     justify-content: space-between;
     padding: 10px;
     gap: 15px;
+    @media (max-width: 975px) {
+        display: none;
+    }
     .redes__fb_logo {
         width: 35px;
         height: 35px; 
@@ -86,49 +124,3 @@ nav {
     }
 }
 
-@media (max-width: 975px) {
-    nav {
-        flex-direction: row-reverse;
-        height: 80px;
-        align-content: center;
-        > ul {
-            position: absolute;
-            flex-direction: column;
-            background-color: #ffffff;
-            width: 250px;
-            height: 100vh;
-            top: 0;
-            left: -300px;
-            gap: 30px;
-            margin-top: 79px;
-            transition: 0.5s;
-            &:hover{
-                left: 0;
-            }
-            > li { 
-                &:hover ul {
-                    position: relative;
-                    padding-top: 25px;
-                    padding-bottom: 0px;
-                    display: flex;
-                    align-items: flex-start;  
-                }
-                ul {
-                    box-shadow: none;
-                }
-            } 
-        }    
-        .fa-bars {
-            display: block;
-            color: #063358;
-            font-size: 30px;
-            padding: 10px;
-            &:hover + ul {
-                left: 0;
-            }
-        }    
-        .redes {
-            display: none;
-        }
-    }  
-}    

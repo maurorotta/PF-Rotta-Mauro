@@ -6,38 +6,103 @@
                          "header header header"
                          "main   main   main"
                          "aside  aside  aside"
-                         "footer footer footer";                     
-}
-@media (max-width: 950px) {
-    .body-index {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 80px 300px auto auto auto;
-        grid-template-areas: "nav"
-                             "header"
-                             "main"
-                             "aside"
-                             "footer";
+                         "footer footer footer"; 
+                         @media (max-width: 950px) {
+                            display: grid;
+                            grid-template-columns: 100%;
+                            grid-template-rows: 80px 300px auto auto auto;
+                            grid-template-areas: "nav"
+                                                 "header"
+                                                 "main"
+                                                 "aside"
+                                                 "footer";                                      
+                        }
+    main {
+        grid-area: main;
+        width: 100%;
     } 
+    aside {
+        grid-area: aside;
+        width: 100%;
+    }                                       
 }       
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 170px 1fr 170px auto;
-    grid-template-areas: "titulo1 titulo1 titulo1"
-                         "tarjeta tarjeta tarjeta"
-                         "titulo1_2 titulo1_2 titulo1_2"
-                         "video   video   video";
-}                                     
-@media (max-width: 950px) {
-    .container {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 85px 1fr 85px auto;
-        grid-template-areas: "titulo1"
-                             "tarjeta"
-                             "titulo1_2"
-                             "video";
-
-    }
+    grid-template-areas: "major-title major-title major-title"
+                         "tarjeta     tarjeta     tarjeta"
+                         "minor-title minor-title minor-title"
+                         "video       video       video";
+                         @media (max-width: 950px) {
+                            display: grid;
+                            grid-template-columns: 100%;
+                            grid-template-rows: 85px 1fr 85px auto;
+                            grid-template-areas: "major-title"
+                                                 "tarjeta"
+                                                 "minor-title"
+                                                 "video";                            
+                        }                                     
 }    
+.body-instruments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header"
+                         "main   main   main   main"
+                         "footer footer footer footer";
+                         @media (max-width: 950px) {
+                            grid-template-rows: 80px auto auto auto;
+                         }
+    .nav-intruments {
+        grid-area: nav;
+    }                     
+    header {
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        background-color: $third-color;
+    }
+    .main-instruments {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer {
+        grid-area: footer;
+    }                     
+}
+.workshop_body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 130px auto auto;
+    grid-template-areas: "nav    nav"
+                         "header header"
+                         "main   main"
+                         "footer footer";
+}    
+.workshop_nav {
+    grid-area: nav;
+ }
+.workshop_header {
+    grid-area: header;
+}
+.workshop_main {
+    grid-area: main;
+}
+.workshop_footer {
+    grid-area: footer;
+}
+.workshop_div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "section_one section_one"
+                         "section_two section_two"
+                         "section_three section_three"
+                         "section_four section_four";
+    .section_one, .section_two, .section_three, .section_four {
+        @extend %workshop_section
+    }                     
+}

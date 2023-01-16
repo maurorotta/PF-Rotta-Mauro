@@ -1,40 +1,60 @@
-.titulo1, .titulo3 {
-    color: #ffffff;
-    font-style: bold;
-    font-size: 90px;
-    font-weight: 700;
-    padding: 10px;
-    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
+.major-title {
+  grid-area: major-title; 
+  box-shadow: $shadow;
+  @extend %div-title;    
 }
-$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-.titulo-potencia {
-    grid-area: titulo1;
-    background-color: #181818;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
-    animation: neonGlow 2s infinite alternate $easeInOutQuad;
-    animation: text-flicker-in-glow 4s linear both;
+.minor-title {
+  grid-area: minor-title;
+  box-shadow: $shadow;
+  @extend %div-title;
+}
+.first-title {
+  @extend %primary-title;
+  animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: text-flicker-in-glow 4s linear both;
 }  
-@keyframes neonGlow {
+@-webkit-keyframes neonGlow {
   0% {
-    text-shadow: 0 0 10px rgba(255,255,255,.8),
-                 0 0 20px rgba(255,255,255,.8),
-                 0 0 22px  rgba(255,255,255,.8),
-                 0 0 40px  rgba(255,255,255,.8),
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
   }
   100% {
-    text-shadow: 0 0 2px rgba(255,255,255,.8),
-                 0 0 8px rgba(255,255,255,.8),    
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
   }
 }
-
-.vibrate-1 {
-	animation: vibrate-1 0.3s linear infinite both;
-  animation: text-flicker-out-glow 2.5s linear infinite both;
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
+  }
 }
-
+.vibrate-1 {
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+          animation: vibrate-1 0.3s linear infinite both;
+  -webkit-animation: text-flicker-out-glow 2.5s linear infinite both;
+          animation: text-flicker-out-glow 2.5s linear infinite both;
+}
+@-webkit-keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 @keyframes vibrate-1 {
   0% {
     transform: translate(0);
@@ -54,7 +74,7 @@ $easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
   100% {
     transform: translate(0);
   }
-}  
+}
 @-webkit-keyframes text-flicker-out-glow {
   0% {
     opacity: 1;
@@ -305,58 +325,79 @@ $easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     opacity: 0;
   }
 }
+.second-title {
+  @extend %primary-title;
+  animation: pulsate-bck 4s infinite both;
+  animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@-webkit-keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+}
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+}
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.page-title {
+  @extend %primary-title;
+  background-color: $third-color;
+  box-shadow: $shadow;
+}
 
-@media (max-width:950px){
-    .titulo1 
-    {font-size: 40px;
-    }
+.third-title {
+  color: #ffffff;
+  text-align: left;
+  font-style: bold;
+  font: 700;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 20px;
+  padding: 10px;
+  -webkit-animation: text-shadow-drop-center 0.6s both;
+          animation: text-shadow-drop-center 0.6s both;
+          @media (max-width: 950px) {
+            font-size: 30px;
+            text-align: center;
+            margin: 10px;
+          }        
 }
-@media (max-width:450px){
-    .titulo1 
-    {font-size: 30px;
-    }
-}
-.titulo-pages {
-    background-color: #181818;
-    width: 100%;
-    height: 170px;
-    text-align: center;
-    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
-} 
-.titulo1_2 {
-    grid-area: titulo1_2;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: bold;
-    font: 700;
-    font-size: 90px;
-    font-weight: 700;
-    background-color: #181818;
-    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.42);
-}    
-@media (max-width:950px){
-    .titulo1_2 
-    {font-size: 60px;
-    }
-}
-@media (max-width: 785px) {
-    .titulo1_2{
-        font-size: 40px;
-    }
-}
-.titulo2 {
-    color: #ffffff;
-    text-align: left;
-    font-style: bold;
-    font: 700;
-    font-size: 60px;
-    font-weight: 700;
-    margin: 20px;
-    padding: 10px;
-    animation: text-shadow-drop-center 0.6s both;
-}  
+
 @-webkit-keyframes text-shadow-drop-center {
   0% {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -372,21 +413,4 @@ $easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
   100% {
     text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
   }
-}
-
-@media (max-width: 950px) {
-    .titulo2 {
-        font-size: 30px;
-        text-align: center;
-        margin: 10px;
-    }
-    
-}
-.titulo-especificaciones {
-  color: #ffffff;
-  text-align: left;
-  font-style: bold;
-  font: 700;
-  font-size: 60px;
-  font-weight: 700;
 }

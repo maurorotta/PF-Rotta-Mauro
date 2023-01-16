@@ -1,5 +1,4 @@
-.tarjeta 
-{
+.tarjeta {
     grid-area: tarjeta;
     display: flex;
     justify-content: space-evenly;
@@ -11,15 +10,13 @@
         margin: 10px;
     }
 }
-.titulo__producto__tarjeta 
-{
+.titulo__producto__tarjeta {
     font-size: 30px;
     font-weight: 700;
-    color: #000000;
+    color: $third-color;
     text-align: center;
     margin: 10px;
 } 
-
 .producto__tarjeta {
     display: flex;
     flex-direction: column;
@@ -41,15 +38,12 @@
     width: 100%;
     font-size: 20px;
 }
-
 .table__producto__tarjeta th {
     text-align: start;
 }
-
 .table__producto__tarjeta td {
     text-align: start;
 }
-
 .añadir_al_carrito {
     display: flex;
     justify-content: center;
@@ -59,7 +53,7 @@
     font-family: "Roboto Condensed", sans-serif;
     font-size: 25px;
     font-weight: 400;
-    background-color: #009FE3;
+    background-color: $first-color;
     color: #ffffff;
     text-align: center;
     border: none; 
@@ -71,4 +65,101 @@
 }
 span {
     color: #ffffff;
+}
+.caja__especificaciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.especificaciones {
+    background-color: #ffffff;
+    width: auto;
+    font-size: 30px;
+    font-weight: 400;
+    list-style: square;
+    list-style-position: inside;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    @media (max-width: 750px) {
+        font-size: 25px;
+    }
+    @media (max-width: 450px) {
+        font-size: 15px;
+    }
+}
+.descripcion {
+    display: inline-block;
+    color: #ffffff;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+    border-radius: 5px;
+    @media (max-width: 750px) {
+        font-size: 20px;
+    }
+    @media (max-width: 450px) {
+        font-size: 15px;
+    }
+}
+.compra__boton {
+    background-color: #ffffff;
+    width: auto;
+    max-height: 900px;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 5px;
+    text-align: center;
+}
+hr {
+    margin: 10px;
+}
+.caja_mapa {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa {
+    margin: 30px;
+}
+
+.tarjeta_contacto {
+    color: #ffffff;
+    font-size: 40px;
+}
+.tarjeta_contacto ul li {
+    margin: 30px;
+    list-style: none;
+}
+
+.tarjeta_contacto a {
+    color: #ffffff;
+    text-decoration: none;
+}    
+
+.workshop-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.instruments-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+.instrument-img {
+    max-width: 350px;
+    object-fit: cover;
+    @media (max-width: 400px) {
+        max-width: 200px;
+    }
 }

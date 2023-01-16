@@ -1,0 +1,55 @@
+.fieldset_bam1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    height: 90px;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.fieldset_bam2 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.fieldset_bam3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.fieldset_bam4 {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.enviar {
+    height: 40px;
+    border-radius: 10px;
+    background-color: $second-color;
+    color: #ffffff;
+    font-size: 20px;
+}
