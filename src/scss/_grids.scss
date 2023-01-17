@@ -81,6 +81,14 @@
                          "header header"
                          "main   main"
                          "footer footer";
+                         @media (max-width: 970px) {
+                            grid-template-columns: 100%;
+                            grid-template-rows: 80px 70px auto auto;
+                            grid-template-areas: "nav"
+                                                 "header"
+                                                 "main"
+                                                 "footer";
+                         }
 }    
 .workshop_nav {
     grid-area: nav;
@@ -95,14 +103,28 @@
     grid-area: footer;
 }
 .workshop_div {
+    margin: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, 680px);
     grid-template-areas: "section_one section_one"
                          "section_two section_two"
                          "section_three section_three"
                          "section_four section_four";
-    .section_one, .section_two, .section_three, .section_four {
+    .section_one{
+        grid-area: section_one;
         @extend %workshop_section
+    }      
+    .section_two {
+        grid-area: section_two;
+        @extend %workshop_section;
+    }
+    .section_three {
+        grid-area: section_three;
+        @extend %workshop_section;
+    }    
+    .section_four {
+        grid-area: section_four;
+        @extend %workshop_section;
     }                     
 }

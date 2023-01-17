@@ -7,16 +7,24 @@
     margin: 50px;
 }
 .workshop_intro {
-    color: #ffffff;
-    font-size: 36px;
+    color: $fourth-color;
+    font-size: 50px;
     padding: 10px;
-    text-align: start;
+    text-align: center;
     font-style: italic;
-    margin: 20px;
+    margin: 40px;
 }
 .workshop_p {
-    color: #ffffff;
-    font-size: 10px;
+    color: $third-color;
+    font-size: 24px;
     padding: 10px;
     text-align: start;
+    max-width: 512px;
+}
+.workshop_p_main {
+    color: $third-color;
+    font-size: 30px;
+    padding: 10px;
+    text-align: start;
+    max-width: 600px;
 }

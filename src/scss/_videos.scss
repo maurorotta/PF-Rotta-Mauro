@@ -30,6 +30,9 @@
     }
 }
 .video2 {
-    max-width: 300px;
-    z-index: -1;
+    max-width: 512px;
+    z-index: 0;
+    @media (max-width: 650px) {
+        max-width: 360px; 
+    }
 }

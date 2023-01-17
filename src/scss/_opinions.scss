@@ -1,52 +1,39 @@
-.opiniones__tarjeta {
+.review-div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 10px;
     padding: 10px;
+    gap: 10px;
 }
-.opinion {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px;
-    font-size: 25px;
+.review-card {
+    @extend %review;
 }
-.opinion2 {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px;
-    font-size: 25px;
+.review-card-2 {
+    @extend %review;
     align-self: end;
 }
-@media (min-width: 495px) {
-    .div-review {
-        display: flex;
+.review-head {
+    background-color: $second-color;
+    padding: 10px;
+    .review-title {
+        color: $fourth-color;
+        @media (max-width: 950px) {
+            .review-title {
+                font-size: 20px;
+            } 
+        }
     }
+}    
+.review-p {
+    padding: 10px;
+    margin: 5px;
 }
 .fa-star {
     color: rgb(250, 246, 21);
+    @media (max-width: 950px) {
+        .fa-star {
+            font-size: 15px;
+        }
+    }    
 }
-@media (max-width: 950px) {
-    .fa-star {
-        font-size: 15px;
-    }
-    
-}
-@media (max-width: 950px) {
-    .titulo-opiniones {
-        font-size: 20px;
-    }  
-}
-@media (max-width: 785px) {
-    .opinion, .opinion2 {
-        width: 100%;
-        font-size: 20px;
-    }
-}
+
