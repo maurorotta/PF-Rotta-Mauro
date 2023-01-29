@@ -327,24 +327,8 @@
 }
 .second-title {
   @extend %primary-title;
-  animation: pulsate-bck 4s infinite both;
+  animation: pulsate-bck 2s infinite both;
   animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-@-webkit-keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
-  }
-  100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
-  }
-}
-@keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
-  }
-  100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
-  }
 }
 @-webkit-keyframes pulsate-bck {
   0% {
@@ -374,15 +358,30 @@
             transform: scale(1);
   }
 }
+@-webkit-keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+}
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+}
 .page-title {
   @extend %primary-title;
   background-color: $third-color;
   box-shadow: $shadow;
 }
-
 .third-title {
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   font-style: bold;
   font: 700;
   font-size: 60px;
@@ -397,7 +396,6 @@
             margin: 10px;
           }        
 }
-
 @-webkit-keyframes text-shadow-drop-center {
   0% {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -413,4 +411,11 @@
   100% {
     text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
   }
+}
+.cards-products {
+  font-size: 30px;
+  font-weight: 700;
+  color: $third-color;
+  text-align: center;
+  margin: 10px;
 }

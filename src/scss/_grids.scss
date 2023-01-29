@@ -24,6 +24,10 @@
     aside {
         grid-area: aside;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }                                       
 }       
 .container {
@@ -66,8 +70,6 @@
     }
     .main-instruments {
         grid-area: main;
-        display: flex;
-        flex-wrap: wrap;
     }
     footer {
         grid-area: footer;

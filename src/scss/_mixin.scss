@@ -1,0 +1,10 @@
+@mixin button($background, $color) {
+    background-color: $background;
+    color: $color;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}    
