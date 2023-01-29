@@ -139,6 +139,30 @@ hr {
 .tarjeta_contacto {
     color: #ffffff;
     font-size: 40px;
+    @media (max-width: 1500px) {
+        font-size: 32px;
+    }
+    @media (max-width: 1300px) {
+        font-size: 30px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 34px;
+    }
+    @media (max-width: 690px) {
+        font-size: 32px;
+    }
+    @media (max-width: 550px) {
+        font-size: 30px;
+    }
+    @media (max-width: 450px) {
+        font-size: 28px;
+    }
+    @media (max-width: 370px) {
+        font-size: 26px;
+    }
+    @media (max-width: 350px) {
+        font-size: 24px;
+    }
     ul {
         @extend %social-logos;
         li {
@@ -153,22 +177,39 @@ hr {
 } 
 .workshop-card {
     width: 45%;
-    height: 650px;
-    padding: 30px;
-    background-color: $fourth-color;
+    max-height: 650px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     @media (max-width: 1200px) {
         width: 100%;
     }
     .workshop-img {
         width: 512px;
-        height: 512px;
+        max-height: 512px;
+        object-fit: fill;
         @media (max-width: 650px) {
-            width: 380px;
-            height: 380px;
+            max-width: 480px; 
+        }
+        @media (max-width: 550px) {
+            max-width: 400px; 
+        }
+        @media (max-width: 480px) {
+            max-width: 380px; 
+        }
+        @media (max-width: 450px) {
+            max-width: 320px; 
+        }
+        @media (max-width: 385px) {
+            max-width: 280px; 
+        }
+        @media (max-width: 350px) {
+            max-width: 250px; 
+        }
+        @media (max-width: 320px) {
+            max-width: 220px; 
         }
     }
 }

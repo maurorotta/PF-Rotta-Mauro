@@ -4,7 +4,13 @@
     padding: 10px;
     text-align: start;
     font-style: italic;
-    margin: 50px;
+    margin: 30px;
+    @media (max-width: 900px) {
+        font-size: 24px;
+    }
+    @media (max-width: 500px) {
+        font-size: 20px;
+    }
 }
 .workshop_intro {
     color: $fourth-color;
@@ -13,18 +19,91 @@
     text-align: center;
     font-style: italic;
     margin: 40px;
+    @media (max-width: 1500px) {
+        font-size: 28px;
+    }
+    @media (max-width: 1300px) {
+        font-size: 26px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 30px;
+    }
+    @media (max-width: 690px) {
+        font-size: 26px;
+        margin: 10px;
+    }
+    @media (max-width: 550px) {
+        font-size: 22px;
+    }
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
+    @media (max-width: 370px) {
+        font-size: 18px;
+    }
+    @media (max-width: 350px) {
+        font-size: 16px;
+    }
 }
 .workshop_p {
-    color: $third-color;
+    color: $fourth-color;
     font-size: 24px;
     padding: 10px;
     text-align: start;
     max-width: 512px;
+    @media (max-width: 1500px) {
+        font-size: 22px;
+    }
+    @media (max-width: 1300px) {
+        font-size: 20px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 24px;
+    }
+    @media (max-width: 690px) {
+        font-size: 22px;
+    }
+    @media (max-width: 550px) {
+        font-size: 20px;
+    }
+    @media (max-width: 450px) {
+        font-size: 18px;
+    }
+    @media (max-width: 370px) {
+        font-size: 16px;
+    }
+    @media (max-width: 350px) {
+        font-size: 14px;
+    }
 }
 .workshop_p_main {
-    color: $third-color;
+    width: 100%;
+    color: $fourth-color;
     font-size: 30px;
     padding: 10px;
-    text-align: start;
     max-width: 600px;
+    @media (max-width: 1500px) {
+        font-size: 28px;
+    }
+    @media (max-width: 1300px) {
+        font-size: 26px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 30px;
+    }
+    @media (max-width: 690px) {
+        font-size: 26px;
+    }
+    @media (max-width: 550px) {
+        font-size: 22px;
+    }
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
+    @media (max-width: 370px) {
+        font-size: 18px;
+    }
+    @media (max-width: 350px) {
+        font-size: 16px;
+    }
 }

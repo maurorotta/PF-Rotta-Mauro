@@ -45,4 +45,7 @@
 }
 .header_pages {
     margin-top: 95px;
+    @media (max-width: 975px) {
+        margin-top: 80px;
+    }
 }

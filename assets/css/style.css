@@ -254,6 +254,11 @@ nav .fa-bars {
 .header_pages {
   margin-top: 95px;
 }
+@media (max-width: 975px) {
+  .header_pages {
+    margin-top: 80px;
+  }
+}
 
 .body-index {
   display: grid;
@@ -358,7 +363,7 @@ nav .fa-bars {
   margin: 20px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(4, 680px);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas: "section_one section_one" "section_two section_two" "section_three section_three" "section_four section_four";
 }
 .workshop_div .section_one {
@@ -372,6 +377,11 @@ nav .fa-bars {
 }
 .workshop_div .section_four {
   grid-area: section_four;
+}
+@media (max-width: 650px) {
+  .workshop_div {
+    margin: 10px;
+  }
 }
 
 .index-cards {
@@ -553,6 +563,46 @@ hr {
   color: #ffffff;
   font-size: 40px;
 }
+@media (max-width: 1500px) {
+  .tarjeta_contacto {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1300px) {
+  .tarjeta_contacto {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .tarjeta_contacto {
+    font-size: 34px;
+  }
+}
+@media (max-width: 690px) {
+  .tarjeta_contacto {
+    font-size: 32px;
+  }
+}
+@media (max-width: 550px) {
+  .tarjeta_contacto {
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .tarjeta_contacto {
+    font-size: 28px;
+  }
+}
+@media (max-width: 370px) {
+  .tarjeta_contacto {
+    font-size: 26px;
+  }
+}
+@media (max-width: 350px) {
+  .tarjeta_contacto {
+    font-size: 24px;
+  }
+}
 .tarjeta_contacto ul li {
   margin: 30px;
   list-style: none;
@@ -564,12 +614,11 @@ hr {
 
 .workshop-card {
   width: 45%;
-  height: 650px;
-  padding: 30px;
-  background-color: rgb(255, 255, 255);
+  max-height: 650px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 1200px) {
@@ -579,12 +628,43 @@ hr {
 }
 .workshop-card .workshop-img {
   width: 512px;
-  height: 512px;
+  max-height: 512px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 @media (max-width: 650px) {
   .workshop-card .workshop-img {
-    width: 380px;
-    height: 380px;
+    max-width: 480px;
+  }
+}
+@media (max-width: 550px) {
+  .workshop-card .workshop-img {
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .workshop-card .workshop-img {
+    max-width: 380px;
+  }
+}
+@media (max-width: 450px) {
+  .workshop-card .workshop-img {
+    max-width: 320px;
+  }
+}
+@media (max-width: 385px) {
+  .workshop-card .workshop-img {
+    max-width: 280px;
+  }
+}
+@media (max-width: 350px) {
+  .workshop-card .workshop-img {
+    max-width: 250px;
+  }
+}
+@media (max-width: 320px) {
+  .workshop-card .workshop-img {
+    max-width: 220px;
   }
 }
 
@@ -647,7 +727,37 @@ hr {
 }
 @media (max-width: 650px) {
   .video2 {
-    max-width: 360px;
+    max-width: 480px;
+  }
+}
+@media (max-width: 550px) {
+  .video2 {
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .video2 {
+    max-width: 380px;
+  }
+}
+@media (max-width: 450px) {
+  .video2 {
+    max-width: 320px;
+  }
+}
+@media (max-width: 385px) {
+  .video2 {
+    max-width: 280px;
+  }
+}
+@media (max-width: 350px) {
+  .video2 {
+    max-width: 250px;
+  }
+}
+@media (max-width: 320px) {
+  .video2 {
+    max-width: 220px;
   }
 }
 
@@ -1117,7 +1227,17 @@ hr {
   padding: 10px;
   text-align: start;
   font-style: italic;
-  margin: 50px;
+  margin: 30px;
+}
+@media (max-width: 900px) {
+  .crea_tu_instrumento {
+    font-size: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .crea_tu_instrumento {
+    font-size: 20px;
+  }
 }
 
 .workshop_intro {
@@ -1128,30 +1248,161 @@ hr {
   font-style: italic;
   margin: 40px;
 }
+@media (max-width: 1500px) {
+  .workshop_intro {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1300px) {
+  .workshop_intro {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1200px) {
+  .workshop_intro {
+    font-size: 30px;
+  }
+}
+@media (max-width: 690px) {
+  .workshop_intro {
+    font-size: 26px;
+    margin: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .workshop_intro {
+    font-size: 22px;
+  }
+}
+@media (max-width: 450px) {
+  .workshop_intro {
+    font-size: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .workshop_intro {
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .workshop_intro {
+    font-size: 16px;
+  }
+}
 
 .workshop_p {
-  color: rgb(24, 24, 24);
+  color: rgb(255, 255, 255);
   font-size: 24px;
   padding: 10px;
   text-align: start;
   max-width: 512px;
 }
+@media (max-width: 1500px) {
+  .workshop_p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1300px) {
+  .workshop_p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .workshop_p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 690px) {
+  .workshop_p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .workshop_p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .workshop_p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 370px) {
+  .workshop_p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 350px) {
+  .workshop_p {
+    font-size: 14px;
+  }
+}
 
 .workshop_p_main {
-  color: rgb(24, 24, 24);
+  width: 100%;
+  color: rgb(255, 255, 255);
   font-size: 30px;
   padding: 10px;
-  text-align: start;
   max-width: 600px;
+}
+@media (max-width: 1500px) {
+  .workshop_p_main {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1300px) {
+  .workshop_p_main {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1200px) {
+  .workshop_p_main {
+    font-size: 30px;
+  }
+}
+@media (max-width: 690px) {
+  .workshop_p_main {
+    font-size: 26px;
+  }
+}
+@media (max-width: 550px) {
+  .workshop_p_main {
+    font-size: 22px;
+  }
+}
+@media (max-width: 450px) {
+  .workshop_p_main {
+    font-size: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .workshop_p_main {
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .workshop_p_main {
+    font-size: 16px;
+  }
 }
 
 .build-main {
   display: flex;
 }
+@media (max-width: 900px) {
+  .build-main {
+    flex-direction: column;
+  }
+}
 .build-main .tu_bam {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
+}
+@media (max-width: 900px) {
+  .build-main .tu_bam {
+    width: 100%;
+  }
 }
 .build-main .tu_bam form {
   max-height: 1000px;
@@ -1164,6 +1415,8 @@ hr {
 @media (max-width: 750px) {
   .build-main .tu_bam form {
     justify-content: center;
+    margin: 5px;
+    padding: 5px;
   }
 }
 .build-main .tu_bam form .fieldset_bam1 {
@@ -1174,14 +1427,33 @@ hr {
 }
 .build-main .tu_bam form .fieldset_bam2 {
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
   gap: 5px;
 }
 .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
   padding: 5px;
   font-size: 25px;
   font-family: "Roboto Condensed", sans-serif;
+}
+@media (max-width: 1200px) {
+  .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
+    font-size: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
+    font-size: 22px;
+  }
+}
+@media (max-width: 750px) {
+  .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
+    font-size: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
+    font-size: 15px;
+  }
 }
 .build-main .tu_bam form .fieldset_bam3 {
   flex-direction: column;
@@ -1192,6 +1464,26 @@ hr {
   padding: 5px;
   font-size: 20px;
   font-family: "Roboto Condensed", sans-serif;
+}
+@media (max-width: 1200px) {
+  .build-main .tu_bam form .fieldset_bam3 textarea {
+    font-size: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .build-main .tu_bam form .fieldset_bam3 textarea {
+    font-size: 22px;
+  }
+}
+@media (max-width: 750px) {
+  .build-main .tu_bam form .fieldset_bam3 textarea {
+    font-size: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .build-main .tu_bam form .fieldset_bam3 textarea {
+    font-size: 15px;
+  }
 }
 @media (max-width: 750px) {
   .build-main .tu_bam form .fieldset_bam3 {
@@ -1214,6 +1506,26 @@ hr {
   outline: none;
   font-family: "Roboto Condensed", sans-serif;
 }
+@media (max-width: 1200px) {
+  .build-main .tu_bam form .fieldset_bam4 input {
+    font-size: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .build-main .tu_bam form .fieldset_bam4 input {
+    font-size: 22px;
+  }
+}
+@media (max-width: 750px) {
+  .build-main .tu_bam form .fieldset_bam4 input {
+    font-size: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .build-main .tu_bam form .fieldset_bam4 input {
+    font-size: 15px;
+  }
+}
 .build-main .tu_bam form .enviar {
   width: 100%;
   height: 40px;
@@ -1225,12 +1537,17 @@ hr {
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+@media (max-width: 900px) {
+  .build-main .form-imgs {
+    display: none;
+  }
 }
 .build-main .form-imgs .form-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100;
-  max-height: 1000px;
+  width: 95%;
   opacity: 0.1;
 }
 
@@ -1251,7 +1568,7 @@ footer {
 .first-title, .second-title, .page-title {
   color: #ffffff;
   font-style: bold;
-  font-size: 80px;
+  font-size: 90px;
   font-weight: 700;
   padding: 10px;
 }
@@ -1330,4 +1647,24 @@ footer {
   border: none;
   width: 100%;
   padding: 10px;
+}
+@media (max-width: 1200px) {
+  .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 750px) {
+  .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
