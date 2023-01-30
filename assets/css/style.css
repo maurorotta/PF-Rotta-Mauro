@@ -506,6 +506,11 @@ nav .fa-bars {
   padding: 10px;
   margin: 10px;
 }
+@media (max-width: 950px) {
+  .purchase-div .purchase-box {
+    width: 60%;
+  }
+}
 .purchase-div .purchase-box p {
   font-size: 21px;
   font-weight: 400;
@@ -1398,6 +1403,7 @@ hr {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
+  height: auto;
 }
 @media (max-width: 900px) {
   .build-main .tu_bam {
@@ -1405,7 +1411,6 @@ hr {
   }
 }
 .build-main .tu_bam form {
-  max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1429,6 +1434,15 @@ hr {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 5px;
+}
+.build-main .tu_bam form .fieldset_bam2 .group-one, .build-main .tu_bam form .fieldset_bam2 .group-two {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 390px) {
+  .build-main .tu_bam form .fieldset_bam2 .group-one, .build-main .tu_bam form .fieldset_bam2 .group-two {
+    flex-direction: column;
+  }
 }
 .build-main .tu_bam form .fieldset_bam2 option, .build-main .tu_bam form .fieldset_bam2 select {
   padding: 5px;
@@ -1491,7 +1505,7 @@ hr {
   }
 }
 .build-main .tu_bam form .fieldset_bam4 {
-  height: 200px;
+  height: auto;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1528,18 +1542,25 @@ hr {
 }
 .build-main .tu_bam form .enviar {
   width: 100%;
-  height: 40px;
+  padding: 10px;
   background-color: rgb(6, 51, 88);
   color: rgb(255, 255, 255);
   font-size: 25px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+@media (max-width: 500px) {
+  .build-main .tu_bam form .enviar {
+    font-size: 20px;
+  }
 }
 .build-main .form-imgs {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 10px;
+  gap: 20px;
 }
 @media (max-width: 900px) {
   .build-main .form-imgs {
@@ -1558,10 +1579,35 @@ footer {
   width: 100%;
   padding: 10px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width: 495px) {
+footer .footer-redes {
+  display: none;
+  padding: 10px;
+  gap: 15px;
+}
+@media (max-width: 980px) {
+  footer .footer-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+}
+footer .footer-redes p {
+  width: 100%;
+}
+footer .footer-redes .logos {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 980px) {
   footer {
-    text-align: center;
+    font-size: 17px;
   }
 }
 
@@ -1623,17 +1669,17 @@ footer {
   }
 }
 
-.redes .redes__fb_logo, .tarjeta_contacto ul .redes__fb_logo {
+.redes .redes__fb_logo, .tarjeta_contacto ul .redes__fb_logo, footer .footer-redes .redes__fb_logo {
   width: 35px;
   height: 35px;
 }
-.redes .redes__insta_logo, .tarjeta_contacto ul .redes__insta_logo {
+.redes .redes__insta_logo, .tarjeta_contacto ul .redes__insta_logo, footer .footer-redes .redes__insta_logo {
   width: 35px;
   height: 35px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
-.redes .redes__wapp_logo, .tarjeta_contacto ul .redes__wapp_logo {
+.redes .redes__wapp_logo, .tarjeta_contacto ul .redes__wapp_logo, footer .footer-redes .redes__wapp_logo {
   width: 35px;
   height: 35px;
   background-color: rgb(255, 255, 255);
@@ -1650,21 +1696,21 @@ footer {
 }
 @media (max-width: 1200px) {
   .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
-    font-size: 25px;
+    font-size: 27px;
   }
 }
 @media (max-width: 900px) {
   .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
-    font-size: 22px;
+    font-size: 25px;
   }
 }
 @media (max-width: 750px) {
   .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
-    font-size: 17px;
+    font-size: 23px;
   }
 }
 @media (max-width: 500px) {
   .build-main .tu_bam form .fieldset_bam1, .build-main .tu_bam form .fieldset_bam2, .build-main .tu_bam form .fieldset_bam3, .build-main .tu_bam form .fieldset_bam4 {
-    font-size: 15px;
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
